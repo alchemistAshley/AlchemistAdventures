@@ -1,0 +1,25 @@
+{
+  "name": "alchemistadventures",
+  "version": "1.0.0",
+  "description": "AlchemistAdventures- a personal blog site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashleywinnop/AlchemistAdventures.git"
+  },
+  "author": "Ashley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashleywinnop/AlchemistAdventures/issues"
+  },
+  "homepage": "https://github.com/ashleywinnop/AlchemistAdventures#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "sequelize": "^4.37.10"
+  }
+}
