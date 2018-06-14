@@ -1,0 +1,14 @@
+@font-face {
+    font-family: NeatoSerif-Regularimport;
+    src:url('assets/css/fonts/neato_serif_fonts//NeatoSerif-Regular.otf');
+}
+
+.custom-font {
+  font-family: 'Song Myung', serif;;
+}
+
+.sideImg {
+    height: 200px;
+    border-radius: 50%;
+}
+
