@@ -1,3 +1,5 @@
+var isLoggedIn = false;
+
 $(document).ready(function() {
 
     // blogContainer holds ALL of our posts
@@ -8,9 +10,27 @@ $(document).ready(function() {
     // if ADMIN, button to create NEW POST --> direct to CMS page
     $(document).on("click", "button.new-post", handleNewPost);
 
+    $("#logout").on("click", function(){
+        console.log("logout", $.cookie("sessionId"));
+        $.post("/logout", {
+            sessionId: document.cookie.sessionId
+        }, function(){
+            delete document.cookie.sessionId;
+            window.location.href = "/";
+        });
+    });
+
     function getPosts() {
         $.get("/api/posts", function(data) {
-            console.log("Posts", data)
+            isLoggedIn = data.loggedIn;
+
+            if(!isLoggedIn){
+                $('#newPostButton').hide();
+            } else{
+                $('#newPostButton').show();
+            }
+
+            console.log("Posts", data);
             if (!data || !data.length) {
               displayEmpty();
             }
@@ -45,8 +65,11 @@ $(document).ready(function() {
         var newPost = $("<div>");
 
         newPost.load("post.html", function() {
-            var id = newPost.find(".post-edit");
-            id.attr("postId", data.id);
+            var editButton = newPost.find(".post-edit");
+            editButton.attr("postId", data.id);
+            if(!isLoggedIn){
+                editButton.hide();
+            }
             console.log(newPost);
             var title = newPost.find(".post-title");
             console.log(title);

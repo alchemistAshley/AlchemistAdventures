@@ -5,7 +5,7 @@
         <title>Alchemist Adventures</title>
 
         <!-- link to favicon -->
-        <link rel="shortcut icon" href="assets/img/iconified/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
         <!-- link to font -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <!-- UIkit CSS -->
@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.5/css/uikit.min.css" />
 
         <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- <script src="assets/js/jquery.cookie.js"/> -->
         <!-- UIkit JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.5/js/uikit.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.5/js/uikit-icons.min.js"></script>
@@ -22,38 +23,53 @@
     </head>
 
     <body>
-        <nav class="uk-navbar-container" uk-navbar uk-sticky>
-            <div class="uk-navbar-center">        
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="#">Home</a></li>
-                    <li><a href="#">|</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">|</a></li>
-                    <li><a href="#">Food</a></li>
-                    <li><a href="#">|</a></li>
-                    <li><a href="#">Travel</a></li>
-                </ul>       
+        <div class="header" uk-sticky>
+            <div class="nav">
+                <ul class="uk-text-center">
+                    <li class="uk-text-bottom"><a class="active" href="index.html">HOME</a></li>
+                    <li class="uk-text-bottom"><a href="#">DESIGN</a></li>
+                    <li class="uk-text-bottom"><a href="#">FOOD</a></li>
+                    <li class="uk-text-bottom"><a href="#">TRAVEL</a></li>
+                </ul>
             </div>
-        </nav>
-        <div>
-            <h1 uk-sticky="offset: 100" class='custom-font uk-position-top-center'>Alchemist Adventures</h1>
-        </div>
-        
+            <div class="logo uk-text-center">
+                <h1 class='custom-font uk-position-center uk-text-center '>Alchemist Adventures</h1>
+            </div>
+            <div class="uk-text-center">
+                <button class="uk-button uk-button-text uk-position-right uk-margin-right" id="logout">Logout</button>
+            </div>    
+        </div>        
 
         <div class="uk-container">
             <div uk-grid>
                 <div class="uk-width-3-4 uk-margin-medium-top" id="blogContainer">
+                        <h2 class='uk-text-center uk-text-middle uk-text-uppercase custom-font post-title'></h1>
+                        <p class='uk-text-center uk-text-small uk-text-muted category'></p>
+                        <p class='uk-text-left post-body'></p>
+                        <!-- <img uk-img class='post-img' alt='food image' src="assets/img/alchemistAdventures.jpg"/> -->
+                        <!-- If admin, EDIT button appears -->
+                        <!-- <button class="uk-button uk-button-text post-edit">EDIT</button> -->
+                        <!-- Leave a Comment (goes to post page, opens comment) -->
+                        <!-- Share links -->
+                        <hr>
                 </div>
                 
                 <div class="uk-width-1-4 sideInfo uk-margin-medium-top">
-                    <div class="uk-text-center" uk-sticky="offset: 100">
+                    <div class="uk-text-center" uk-sticky="offset: 120">
                         <img uk-img class='sideImg' data-src='assets/img/ARW.jpg' alt='image'/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <!-- ADD CONTACT INFO: social media link icons here to Facebook, Instagram, Twitter, Pinterest, Github, Email, etc -->
+                        <p>an alchemist is a person who transforms or creates something through a seemingly magical process</p>
+                        <div class="uk-margin-top">
+                            <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="pinterest"></a>
+                            <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="instagram"></a>
+                            <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="twitter"></a>
+                            <a href="#" class="uk-icon-link" uk-icon="foursquare"></a>
+                        </div>
                         <div class="uk-margin-medium-top">
                             <!-- If admin, NEW POST button appears (black with white font) -->
                             <button class="uk-button uk-button-secondary uk-width-1-1 new-post">NEW POST</button>
                         </div>
+
+                        
                     </div>
                 </div>
             </div>

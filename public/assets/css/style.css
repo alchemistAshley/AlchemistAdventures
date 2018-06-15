@@ -7,13 +7,43 @@
   font-family: 'NeatoSerif-Regularimport', serif;
 }
 
+.header {
+    background-color: #f7cac9;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f7cac9;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #313131;
+    text-align: center;
+    padding: 30px 16px 10px 10px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #f7cac9;
+    color: #313131;
+}
+
 .sideImg {
     height: 200px;
+    width: auto;
     border-radius: 50%;
 }
 
 .logo {
-    height: 25%;
+    height: 15%;
     width: auto;
 }
 

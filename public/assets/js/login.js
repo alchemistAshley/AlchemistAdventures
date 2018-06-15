@@ -20,4 +20,5 @@ $(loginForm).on("submit", function handleLoginSubmit(event) {
         document.cookie = "SessionId=" + session.session;
         window.location.href = "/";
     });
+
 });

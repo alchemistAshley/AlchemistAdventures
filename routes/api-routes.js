@@ -29,6 +29,16 @@ module.exports = function(app) {
         });
     });
 
+    app.post("/logout", function(req, res){
+        db.Admin.update({
+            sessionId: null
+        },{
+            where: {
+                sessionId: req.body.sessionId
+            }
+        });
+    });
+
     // GET All posts --> Home Page
     app.get("/api/posts", function(req, res) {
         db.Post.findAll({})
@@ -37,7 +47,16 @@ module.exports = function(app) {
             // dbPost.image = "data:image/jpeg;base64,"+image;
             // console.log(dbPost.image);
             // dbPost.image = dbPost.image.toString('utf8');
-            res.json(dbPost); 
+
+            db.Admin.findOne({
+                where: {
+                    sessionId : req.params.sessionId
+                }
+            }).then(function(user){
+                dbPost.loggedIn = user != null;
+                res.json(dbPost); 
+            });
+            
         });
     });
 
