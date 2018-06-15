@@ -38,12 +38,13 @@ module.exports = function(app) {
 
     // POST for saving new post 
     app.post("/api/posts", function(req, res) {
-        console.log(req.body);
+        // console.log(req.body);
+        console.log("IMAGE", Object.prototype.toString.call(req.body.image));
         db.Post.create({
             title: req.body.title,
             body: req.body.body,
             category: req.body.category,
-            image: req.body.image
+            image: Buffer.from("", "base64"),
         }).then(function(dbPost) {
             res.json(dbPost);
         });
@@ -71,4 +72,10 @@ module.exports = function(app) {
             res.json(dbPost);
         });
     });
+
+    function stripMime(image) {
+        var res = image.split(",");
+        console.log(res[1]);
+        return res[1];
+    }
 };

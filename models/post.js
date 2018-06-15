@@ -22,7 +22,8 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.BLOB('medium'),
         allowNull: false,
         get: function() {
-          return this.getDataValue('image').toString('utf8');
+          // return this.getDataValue('image').toString('utf8');
+          return Buffer.from(this).toString("base64");
         }
     },
     createdAt: DataTypes.DATE,

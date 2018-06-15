@@ -5,10 +5,12 @@
         <title>Alchemist Adventures</title>
 
         <!-- link to favicon -->
+        <link rel="shortcut icon" href="assets/img/iconified/favicon.ico" type="image/x-icon" />
         <!-- link to font -->
-        <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <!-- UIkit CSS -->
         <link rel='stylesheet' href='assets/css/style.css'/>
+        <!-- <link rel='stylesheet' href='assets/css/uikit-custom.css'/> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.5/css/uikit.min.css" />
 
         <script src="https://code.jquery.com/jquery.js"></script>
@@ -20,9 +22,6 @@
     </head>
 
     <body>
-        <div uk-sticky>
-            <h1 class='custom-font'>Alchemist Adventures</h1>
-        </div>
         <nav class="uk-navbar-container" uk-navbar uk-sticky>
             <div class="uk-navbar-center">        
                 <ul class="uk-navbar-nav">
@@ -36,6 +35,10 @@
                 </ul>       
             </div>
         </nav>
+        <div>
+            <h1 uk-sticky="offset: 100" class='custom-font uk-position-top-center'>Alchemist Adventures</h1>
+        </div>
+        
 
         <div class="uk-container">
             <div uk-grid>

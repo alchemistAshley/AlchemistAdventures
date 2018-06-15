@@ -12,3 +12,11 @@
     border-radius: 50%;
 }
 
+.logo {
+    height: 25%;
+    width: auto;
+}
+
+.body-font {
+    font-family: 'Montserrat', sans-serif;
+}
