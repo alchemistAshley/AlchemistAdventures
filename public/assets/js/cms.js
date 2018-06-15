@@ -23,7 +23,7 @@ $(document).ready(function(){
         event.preventDefault();
 
         // if title or body is missing, form won't submit
-        if (!titleInput.val().trim() || !bodyInput.val().trim() || !imageInput.val().trim()) {
+        if (!titleInput.val().trim() || !bodyInput.val().trim()) {
             return;
         }
 
