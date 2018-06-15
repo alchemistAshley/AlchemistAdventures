@@ -57,7 +57,7 @@ $(document).ready(function() {
             category.html(data.category);
             var image = newPost.find(".post-image");
             image.attr("src", data.image);
-            blogContainer.append(newPost);  
+            blogContainer.prepend(newPost);  
         });
     }
 

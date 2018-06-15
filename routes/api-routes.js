@@ -2,12 +2,39 @@ const db = require("../models");
 
 module.exports = function(app) {
 
+    app.post("/login", function(req, res) {
+        db.Admin.findOne({
+            where: {
+                username: req.body.username,
+                password: req.body.password
+            }
+        }).then(function(dbLogin) {
+            if (dbLogin) {
+                var sessid =  "" + (Math.random() * 10000000000000000000);
+                db.Admin.update({
+                    sessionId: sessid
+                }, {
+                    where: {
+                        username: dbLogin.username,
+                        password: dbLogin.password
+                    }
+                }).then(function(){
+                    var sess = {
+                        session: sessid
+                    };
+                    console.log(sess);
+                    res.json(sess);
+                });
+            } 
+        });
+    });
+
     // GET All posts --> Home Page
     app.get("/api/posts", function(req, res) {
         db.Post.findAll({})
         .then(function(dbPost) {
-            // var image = new Buffer(dbPost.image, 'binary').toString('base64');
-            // dbPost.image = image;
+            //  var image = new Buffer(dbPost.image, 'binary').toString('base64');
+            // dbPost.image = "data:image/jpeg;base64,"+image;
             // console.log(dbPost.image);
             // dbPost.image = dbPost.image.toString('utf8');
             res.json(dbPost); 
@@ -39,12 +66,12 @@ module.exports = function(app) {
     // POST for saving new post 
     app.post("/api/posts", function(req, res) {
         // console.log(req.body);
-        console.log("IMAGE", Object.prototype.toString.call(req.body.image));
+        console.log(req.body.image);
         db.Post.create({
             title: req.body.title,
             body: req.body.body,
             category: req.body.category,
-            image: Buffer.from("", "base64"),
+            image: req.body.image,
         }).then(function(dbPost) {
             res.json(dbPost);
         });

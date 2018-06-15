@@ -19,12 +19,12 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     image: {
-        type: DataTypes.BLOB('medium'),
-        allowNull: false,
-        get: function() {
-          // return this.getDataValue('image').toString('utf8');
-          return Buffer.from(this).toString("base64");
-        }
+        type: DataTypes.BLOB('long'),
+        allowNull: true,
+        // get: function() {
+        //   // return this.getDataValue('image').toString('utf8');
+        //   return Buffer.from(this).toString("base64");
+        // }
     },
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
