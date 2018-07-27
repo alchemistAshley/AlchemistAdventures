@@ -43,11 +43,7 @@ module.exports = function(app) {
     app.get("/api/posts", function(req, res) {
         db.Post.findAll({})
         .then(function(dbPost) {
-            //  var image = new Buffer(dbPost.image, 'binary').toString('base64');
-            // dbPost.image = "data:image/jpeg;base64,"+image;
-            // console.log(dbPost.image);
-            // dbPost.image = dbPost.image.toString('utf8');
-
+            console.log("IMAGE:", dbPost.image);
             db.Admin.findOne({
                 where: {
                     sessionId : req.params.sessionId
@@ -119,9 +115,9 @@ module.exports = function(app) {
         });
     });
 
-    function stripMime(image) {
-        var res = image.split(",");
-        console.log(res[1]);
-        return res[1];
-    }
+    // function stripMime(image) {
+    //     var res = image.split(",");
+    //     console.log(res[1]);
+    //     return res[1];
+    // }
 };

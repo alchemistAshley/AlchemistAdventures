@@ -67,9 +67,9 @@ $(document).ready(function() {
         newPost.load("post.html", function() {
             var editButton = newPost.find(".post-edit");
             editButton.attr("postId", data.id);
-            if(!isLoggedIn){
-                editButton.hide();
-            }
+            // if(!isLoggedIn){
+            //     editButton.hide();
+            // }
             console.log(newPost);
             var title = newPost.find(".post-title");
             console.log(title);
@@ -80,6 +80,7 @@ $(document).ready(function() {
             category.html(data.category);
             var image = newPost.find(".post-image");
             image.attr("src", data.image);
+            console.log("image:", data.image);
             blogContainer.prepend(newPost);  
         });
     }

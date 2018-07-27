@@ -27,18 +27,18 @@ $(document).ready(function(){
             return;
         }
 
-        var file = imageInput.prop('files')[0];
+        // var file = imageInput.prop('files')[0];
 
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onloadend = function() {
-            console.log(reader.result);
+        // var reader = new FileReader();
+        // reader.readAsDataURL(file);
+        // reader.onloadend = function() {
+        //     console.log(reader.result);
             
             var newPost = {
             category: postCategorySelect.val(),
             title: titleInput.val().trim(),
             body: bodyInput.val().trim(),            
-            image: reader.result
+            image: imageInput.val()
             };
             
             console.log("New Post: " + newPost);
@@ -49,11 +49,11 @@ $(document).ready(function(){
             } else {
             submitPost(newPost);
             }
-        };
+        // };
 
-        reader.onerror = function(error) {
-            console.log('Error', error);
-        };
+        // reader.onerror = function(error) {
+        //     console.log('Error', error);
+        // };
     });
 
     function submitPost(post) {

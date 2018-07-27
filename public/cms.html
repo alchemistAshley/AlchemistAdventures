@@ -20,6 +20,7 @@
 
     <body>
        <div class="uk-container">
+            <h1 class="uk-heading-line uk-margin-medium-top uk-text-center custom-font"><span>EDIT POST</span></h1>
             <form class="uk-form-stacked uk-margin-top" id="cms">
                 <div class="uk-margin">
                     <div uk-grid>
@@ -35,8 +36,8 @@
                             <span uk-icon="icon: chevron-down"></span>
                         </button>
                         </div> 
-                        <div class="uk-width-1-5">
-                            <a href="#" class="uk-icon-link post-delete" uk-icon="icon: trash; ratio: 1.25"></a>
+                        <div class="uk-width-1-5 uk-inline">
+                            <a href="#" class="uk-icon-link uk-position-center-right post-delete" uk-icon="icon: trash; ratio: 1.4"></a>
                         </div>
                     </div>
                 </div>
@@ -54,11 +55,17 @@
                 </div>
 
                 <div class="uk-margin" uk-margin>
-                    <div uk-form-custom="target: true">
-                        <input type="file" id="image">
-                        <input class="uk-input uk-form-width-medium post-image" type="text" placeholder="Select file" disabled>
-                    </div>
-                    <button class="uk-button uk-button-default submit" type="submit">Submit</button>
+                    <!-- <div uk-form-custom="target: true"> -->
+                        <!-- <input type="file" id="image">
+                        <input class="uk-input uk-form-width-medium post-image" type="text" placeholder="Select file" disabled> -->
+                    <label class="uk-form-label">Photo URL:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input post-image" id="image" type="text" placeholder="">
+                    </div>          
+                </div>
+
+                <div class="uk-margin">
+                    <button class="uk-button uk-button-secondary uk-width-1-1 submit" type="submit">Submit</button>
                 </div>
             </form>
         </div> 
