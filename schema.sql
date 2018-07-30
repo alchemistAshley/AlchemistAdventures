@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS alchemist_adventures;
+DROP DATABASE IF EXISTS alchemistAdventuresBlog;
 
-CREATE DATABASE alchemist_adventures;
+CREATE DATABASE alchemistAdventuresBlog;
