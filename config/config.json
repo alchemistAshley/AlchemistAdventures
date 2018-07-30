@@ -1,27 +1,27 @@
 {
-    "development": {
-      "username": "root",
-      "password": "root",
-      "database": "alchemist_adventures",
-      "host": "127.0.0.1",
-      "port": 3306,
-      "dialect": "mysql"
-    },
-    "test": {
-      "username": "root",
-      "password": null,
-      "database": "database_test",
-      "host": "127.0.0.1",
-      "port": 3306,
-      "dialect": "mysql"
-    },
-    "production": {
-      "use_env_variable": "JAWSDB_URL",
-      "username": "w4uz6jf6j1688bap",
-      "password": "cfzl38ktfvhnvxfj",
-      "database": "ys43cim3vozfh18i",
-      "host": "g3v9lgqa8h5nq05o.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-      "port": 3306,
-      "dialect": "mysql"
-    }
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "alchemistAdventuresBlog",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "username": "w4uz6jf6j1688bap",
+    "password": "cfzl38ktfvhnvxfj",
+    "database": "ys43cim3vozfh18i",
+    "host": "g3v9lgqa8h5nq05o.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
+    "dialect": "mysql"
   }
+}

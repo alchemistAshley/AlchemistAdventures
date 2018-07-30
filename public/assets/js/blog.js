@@ -70,7 +70,6 @@ $(document).ready(function() {
             // if(!isLoggedIn){
             //     editButton.hide();
             // }
-            console.log(newPost);
             var title = newPost.find(".post-title");
             console.log(title);
             title.html(data.title);

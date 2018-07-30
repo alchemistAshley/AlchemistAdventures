@@ -43,7 +43,7 @@ module.exports = function(app) {
     app.get("/api/posts", function(req, res) {
         db.Post.findAll({})
         .then(function(dbPost) {
-            console.log("IMAGE:", dbPost.image);
+            console.log("dbpost:", dbPost);
             db.Admin.findOne({
                 where: {
                     sessionId : req.params.sessionId
@@ -81,7 +81,7 @@ module.exports = function(app) {
     // POST for saving new post 
     app.post("/api/posts", function(req, res) {
         // console.log(req.body);
-        console.log(req.body.image);
+        console.log("req.body.image", req.body.image);
         db.Post.create({
             title: req.body.title,
             body: req.body.body,
