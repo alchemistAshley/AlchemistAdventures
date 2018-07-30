@@ -2,6 +2,8 @@ var isLoggedIn = false;
 
 $(document).ready(function() {
 
+    var posts;
+
     // blogContainer holds ALL of our posts
     var blogContainer = $("#blogContainer");
     
@@ -9,28 +11,40 @@ $(document).ready(function() {
     $(document).on("click", "button.post-edit", handlePostEdit);
     // if ADMIN, button to create NEW POST --> direct to CMS page
     $(document).on("click", "button.new-post", handleNewPost);
+    
+    //category change
+    $(document).on("click", "li.home", getPosts);
+    $(document).on("click", "li.design", handleCategoryChange);
+    $(document).on("click", "li.food", handleCategoryChange);
+    $(document).on("click", "li.travel", handleCategoryChange);
 
-    $("#logout").on("click", function(){
-        console.log("logout", $.cookie("sessionId"));
-        $.post("/logout", {
-            sessionId: document.cookie.sessionId
-        }, function(){
-            delete document.cookie.sessionId;
-            window.location.href = "/";
-        });
-    });
 
-    function getPosts() {
-        $.get("/api/posts", function(data) {
-            isLoggedIn = data.loggedIn;
+    // $("#logout").on("click", function(){
+    //     console.log("logout", $.cookie("sessionId"));
+    //     $.post("/logout", {
+    //         sessionId: document.cookie.sessionId
+    //     }, function(){
+    //         delete document.cookie.sessionId;
+    //         window.location.href = "/";
+    //     });
+    // });
 
-            if(!isLoggedIn){
-                $('#newPostButton').hide();
-            } else{
-                $('#newPostButton').show();
-            }
+    function getPosts(category) {
+        var categoryString = category || "";
+        if (categoryString) {
+            categoryString = "/category/" + categoryString;
+        }
+        $.get("/api/posts", + categoryString, function(data) {
+            // isLoggedIn = data.loggedIn;
+
+            // if(!isLoggedIn){
+            //     $('#newPostButton').hide();
+            // } else{
+            //     $('#newPostButton').show();
+            // }
 
             console.log("Posts", data);
+            posts = data;
             if (!data || !data.length) {
               displayEmpty();
             }
@@ -93,5 +107,11 @@ $(document).ready(function() {
         localStorage.id = currentPost;
         window.location.href = "/cms?post_id=" + currentPost;
     }    
+
+    function handleCategoryChange() {
+        var newCategory = $(this).text().toLowerCase();
+        console.log("Category: ", newCategory);
+        getPosts(newCategory);
+    }
 
 });

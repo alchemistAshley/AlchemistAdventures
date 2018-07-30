@@ -16,19 +16,19 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/cms.html"));
     });
 
-    // DESIGN page
-    app.get("/design", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/design.html"));
-    });
+    // // DESIGN page
+    // app.get("/design", function(req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/design.html"));
+    // });
 
-    // FOOD page
-    app.get("/food", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/food.html"));
-    });
+    // // FOOD page
+    // app.get("/food", function(req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/food.html"));
+    // });
 
-    // EXPLORE page
-    app.get("/travel", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/travel.html"));
-    });
+    // // EXPLORE page
+    // app.get("/travel", function(req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/travel.html"));
+    // });
 
 };

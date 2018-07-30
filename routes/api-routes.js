@@ -43,13 +43,13 @@ module.exports = function(app) {
     app.get("/api/posts", function(req, res) {
         db.Post.findAll({})
         .then(function(dbPost) {
-            console.log("dbpost:", dbPost);
+            // console.log("dbpost:", dbPost);
             db.Admin.findOne({
                 where: {
                     sessionId : req.params.sessionId
                 }
             }).then(function(user){
-                dbPost.loggedIn = user != null;
+                // dbPost.loggedIn = user != null;
                 res.json(dbPost); 
             });
             
@@ -63,6 +63,7 @@ module.exports = function(app) {
                 category: req.params.category
             }
         }).then(function(dbPost) {
+            console.log("dbPost: ", dbPost);
             res.json(dbPost);
         });
     });
@@ -93,7 +94,7 @@ module.exports = function(app) {
     });
 
     // PUT for updating posts
-    app.put("api/posts", function(req, res) {
+    app.put("/api/posts", function(req, res) {
         db.Post.update(req.body,
         { 
             where: {

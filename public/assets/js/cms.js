@@ -63,7 +63,7 @@ $(document).ready(function(){
     }
 
     function getPostData(id) {
-        console.log(id);
+        console.log("POST ID: ", id);
         $(".post-delete").attr("postId", id);
         $.get("/api/posts/" + id, function(data) {
             if (data) {
@@ -77,8 +77,12 @@ $(document).ready(function(){
     }
 
     function updatePost(post) {
-        $.put("/api/posts", post, function() {
-            window.location.href = "/";
+        $.ajax ({
+            method: 'PUT',
+            url: '/api/posts',
+            data: post
+        }). then(function() {
+            window.location.href="/";
         });
     }
 

@@ -17,6 +17,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #f7cac9;
+    display: block;
 }
 
 li {
@@ -45,8 +46,16 @@ li a:hover {
 .logo {
     height: 15%;
     width: auto;
+    display: block;
+    background: #ffffff;
 }
 
 .body-font {
     font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+    background: #313131;
+    color: #ffffff;
+    margin: 0;
 }
