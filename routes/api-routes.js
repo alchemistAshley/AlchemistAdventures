@@ -41,6 +41,7 @@ module.exports = function(app) {
 
     // GET All posts --> Home Page
     app.get("/api/posts", function(req, res) {
+        console.log("get all posts called");
         db.Post.findAll({})
         .then(function(dbPost) {
             // console.log("dbpost:", dbPost);
@@ -58,6 +59,7 @@ module.exports = function(app) {
 
     // GET Posts for specific category --> design/food/travel
     app.get("/api/posts/category/:category", function (req, res) {
+        console.log("get: ", req.params.category);
         db.Post.findAll({
             where: {
                 category: req.params.category
@@ -70,6 +72,7 @@ module.exports = function(app) {
 
     // GET post for specific post --> full article
     app.get("/api/posts/:id", function(req, res) {
+        //console.log("other called");
         db.Post.findOne({
             where: {
                 id: req.params.id
@@ -81,7 +84,7 @@ module.exports = function(app) {
 
     // POST for saving new post 
     app.post("/api/posts", function(req, res) {
-        // console.log(req.body);
+        //console.log("main called");
         console.log("req.body.image", req.body.image);
         db.Post.create({
             title: req.body.title,

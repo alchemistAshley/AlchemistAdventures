@@ -34,7 +34,8 @@ $(document).ready(function() {
         if (categoryString) {
             categoryString = "/category/" + categoryString;
         }
-        $.get("/api/posts", + categoryString, function(data) {
+        console.log("category string: ", categoryString);
+        $.get("/api/posts" + categoryString, function(data) {
             // isLoggedIn = data.loggedIn;
 
             // if(!isLoggedIn){
