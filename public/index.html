@@ -23,18 +23,19 @@
     </head>
 
     <body>
-        <div class="header" uk-sticky>
-            <div class="nav">
-                <ul class="uk-text-center">
-                    <li class="uk-text-bottom uk-text-small home"><a class="active" href="index.html">HOME</a></li>
-                    <li class="uk-text-bottom uk-text-small design" ><a>DESIGN</a></li>
-                    <li class="uk-text-bottom uk-text-small food"><a>FOOD</a></li>
-                    <li class="uk-text-bottom uk-text-small travel"><a>TRAVEL</a></li>
+        <div uk-sticky>
+            <div class="logo-header">
+                <h1 class='custom-font uk-align-center uk-text-center logo uk-margin-remove' >Alchemist Adventures</h1>
+            </div>
+            <div>
+                <ul class="uk-text-center nav header uk-navbar-center uk-logo">
+                    <li class="uk-text-center uk-text-small home nav-item"><a class="active nav-link" href="index.html">HOME</a></li>
+                    <li class="uk-text-center uk-text-small design"><a class="nav-link">DESIGN</a></li>
+                    <li class="uk-text-center uk-text-small food"><a class="nav-link">FOOD</a></li>
+                    <li class="uk-text-center uk-text-small travel"><a class="nav-link">TRAVEL</a></li>
                 </ul>
             </div>
-            <div class="logo uk-text-center">
-                <h1 class='custom-font uk-position-center uk-text-center '>Alchemist Adventures</h1>
-            </div>
+            
             <!-- <div class="uk-text-center">
                 <button class="uk-button uk-button-text uk-position-right uk-margin-right" id="logout">Logout</button>
             </div>     -->
@@ -48,7 +49,7 @@
                 </div>
                 
                 <div class="uk-width-1-4 sideInfo uk-margin-medium-top">
-                    <div class="uk-text-center" uk-sticky="offset: 120">
+                    <div class="uk-text-center" uk-sticky="offset: 165">
                         <img uk-img class='sideImg' data-src='assets/img/ARW.jpg' alt='image'/>
                         <p>an alchemist is a person who transforms or creates something through a seemingly magical process</p>
                         <div class="uk-margin-top">
@@ -67,12 +68,12 @@
             
         </div>
 
-        
-        <!-- <div class="footer">
-            <ul>
-                <li class="uk-align-center"> &copy; Alchemist Adventures 2018 | <a href="https://github.com/alchemistAshley/AlchemistAdventures">Github</a></li>
+        <div class="footer">
+            <ul class="uk-text-center nav header uk-navbar-center uk-logo">
+                <li class="uk-text-center uk-text-small home nav-item uk-margin-small uk-align-center"><a class="nav-link" href="https://github.com/alchemistAshley/AlchemistAdventures">&copy; Alchemist Adventures 2018</a></li>
             </ul>
-        </div> -->
+        </div>
+
     
 
     </body>

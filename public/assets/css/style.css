@@ -3,32 +3,37 @@
     src:url('/assets/css/fonts/neato_serif_fonts//NeatoSerif-Regular.otf');
 }
 
+body {
+    margin: 0px;
+    padding: 0px;
+}
 .custom-font {
   font-family: 'NeatoSerif-Regularimport', serif;
 }
 
 .header {
     background-color: #f7cac9;
+    margin: 0;
 }
 
-ul {
+.nav {
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     overflow: hidden;
     background-color: #f7cac9;
     display: block;
 }
 
-li {
-    float: left;
+.nav-item {
+    margin-left: 40%;
 }
 
-li a {
+.nav-link {
     display: block;
     color: #313131;
     text-align: center;
-    padding: 30px 16px 10px 10px;
+    padding: 12px 8px 12px 8px;
     text-decoration: none;
 }
 
@@ -44,18 +49,30 @@ li a:hover {
 }
 
 .logo {
-    height: 15%;
-    width: auto;
+    font-size: 3rem;
+    padding: 1rem;
     display: block;
     background: #ffffff;
+    margin: 10px 0px;
+    display: block;
+}
+
+.logo-header {
+    background: #ffffff;
+    height: 10%;
+    width: auto;
+    margin: 0;
 }
 
 .body-font {
     font-family: 'Montserrat', sans-serif;
 }
 
-.footer {
-    background: #313131;
-    color: #ffffff;
-    margin: 0;
-}
+/* .footer {
+    background: #f7cac9;
+    color: #313131;
+    margin: 40px 0px 0px 0px;
+    height: 7%;
+    width: auto;
+    overflow: hidden;
+} */
