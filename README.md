@@ -1,4 +1,4 @@
-# AlchemistAdventures
+# Alchemist Adventures
 Alchemist Adventures is a blog site about transforming or creating something through a seemingly **_magical_** process, i.e. cooking and baking, design and development, experiences and travel.
 
 ## Motivation
