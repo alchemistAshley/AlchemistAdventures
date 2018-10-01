@@ -11,9 +11,9 @@ Alchemist Adventures is a way to share my passion projects and stories of metamo
 
 ## Tech
 Alchemist Adventures was built using: 
-..*HTML5
-..*CSS 
-..*UIkit (CSS Framework)
++HTML5
++CSS 
++UIkit (CSS Framework)
 ..*Google Fonts
 ..*JavaScript
 ..*jQuery
