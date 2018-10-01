@@ -26,7 +26,7 @@ Alchemist Adventures was built using:
 * Heroku
 
 ## How to Use
-1. Go to [site]
+1. Go to [site].
 2. Browse posts. Home is all topics are listed in descending order. If you select any of the topic tabs, such as 'Food' it will only show posts (in descending order) that are categorized as 'Food'. 
 3. If you would like to create a new post, select the black 'New post' button to the right.
 4. On the 'Edit Post' page, select the category using the dropdown menu, fill out the Post Title and the Post Body input areas, include a photo link/url, then press the 'Submit' button. 
