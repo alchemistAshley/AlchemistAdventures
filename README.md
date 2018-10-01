@@ -11,19 +11,19 @@ Alchemist Adventures is a way to share my passion projects and stories of metamo
 
 ## Tech
 Alchemist Adventures was built using: 
-+HTML5
-+CSS 
-+UIkit (CSS Framework)
-..*Google Fonts
-..*JavaScript
-..*jQuery
-..*Express
-..*BodyParser
-..*MySQL
-..*Sequelize
-..*JawsDB 
-..*NPM
-..*Heroku
+* HTML5
+* CSS 
+* UIkit (CSS Framework)
+* Google Fonts
+* JavaScript
+* jQuery
+* Express
+* BodyParser
+* MySQL
+* Sequelize
+* JawsDB 
+* NPM
+* Heroku
 
 ## How to Use
 1. Go to [site].
