@@ -5,7 +5,7 @@ Alchemist Adventures is a blog site about transforming or creating something thr
 Alchemist Adventures is a way to share my passion projects and stories of metamorphosis with others. 
 
 ## Site
-[Alchemist Adventures Blog Site](https://hidden-journey-92439.herokuapp.com/ "Alchemist Adventures Blog")
+[Alchemist Adventures](https://hidden-journey-92439.herokuapp.com/ "Alchemist Adventures Blog")
 
 ## Screenshots 
 
