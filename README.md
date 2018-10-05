@@ -15,7 +15,7 @@ Alchemist Adventures was built using:
 * HTML5
 * CSS 
 * UIkit (CSS Framework)
-* Google Fonts
+* Custom Font
 * JavaScript
 * jQuery
 * Express
