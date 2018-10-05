@@ -8,6 +8,7 @@ Alchemist Adventures is a way to share my passion projects and stories of metamo
 [Alchemist Adventures Blog Site](https://hidden-journey-92439.herokuapp.com/ "Alchemist Adventures Blog")
 
 ## Screenshots 
+![](https://media.giphy.com/media/3M9DFWHXuURn0tm8hL/giphy.gif)
 
 ## Tech
 Alchemist Adventures was built using: 
